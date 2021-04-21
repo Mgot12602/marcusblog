@@ -14,52 +14,116 @@ const Project = project => {
       childImageSharp: { gatsbyImageData: image },
     },
   } = project
+  console.log("date", date)
   return (
     <Wrapper>
-      <h2>{title}</h2>
-      <h3>{date}</h3>
       <div className="columns">
-        <div className="image-container">
-          <GatsbyImage image={image} alt={title} />
+        <div>
+          <h2>{title}</h2>
+
+          <div className="image-container">
+            <GatsbyImage image={image} alt={title} className="imgStyle" />
+          </div>
         </div>
+
         <div className="text-container">
-          <h3>
-            {excerpt}
-            <Link to={`/projects/${slug}`}>
-              <span>Read more...</span>
-            </Link>
-          </h3>
+          <h3>{date}</h3>
+          <p>
+            {excerpt}{" "}
+            <span>
+              <Link to={`/projects/${slug}`}>Read more...</Link>
+            </span>
+          </p>
         </div>
       </div>
     </Wrapper>
   )
 }
 
-const Wrapper = styled.div`
+const Wrapper = styled.article`
+  box-shadow: inset 80px 50px 80px 50px rgba(0, 0, 0, 0.3),
+    0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  background-color: var(--secondary-color);
+  width: 80%;
+  padding: 20px 0;
+  border-radius: 3px;
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
+
   h2 {
-    color: purple;
+    /* padding-left: 30px; */
+    text-transform: uppercase;
+    /* border: 1px solid black; */
+    text-align: center;
+    /* background-color: blue; */
+    /* background-size: 100% 0.2em; */
+
+    @media screen and (max-width: 800px) {
+      font-size: 1.5em;
+      padding-left: 5px;
+    }
   }
   .columns {
-    display: flex;
-    justify-content: center;
-    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    /* grid-gap: 20px; */
+    /* border: 1px solid black; */
     width: 100%;
     height: 300px;
   }
-
+  h3 {
+    text-align: center;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    border-top: 5px solid rgba(25, 147, 150, 0.5);
+    background-color: rgba(25, 147, 150, 0.1);
+    @media screen and (max-width: 800px) {
+      font-size: 1em;
+    }
+  }
   span {
     color: green;
   }
 
+  .imgStyle {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.29);
+  }
+
   .image-container {
-    border: 1px solid black;
-    width: 40%;
-    margin: 5px 0;
+    /* width: 40%; */
+
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid black; */
+    align-self: center;
+  }
+
+  .img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
   .text-container {
-    margin: 5px;
-    width: 40%;
+    /* border: 1px solid black; */
+    margin: 5px 30px;
+    padding-left: 10px;
+    @media screen and (max-width: 800px) {
+      margin: 5px 5px;
+    }
+  }
+  a {
+    display: block;
+    font-size: 1.2em;
+  }
+  p {
+    background-color: rgba(25, 147, 150, 0.1);
+    font-size: 1.5em;
+    border-left: 5px solid rgba(25, 147, 150, 0.5);
+    padding-left: 10px;
+    @media screen and (max-width: 800px) {
+      font-size: 1em;
+    }
   }
 `
 

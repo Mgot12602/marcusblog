@@ -1,5 +1,23 @@
 import { createGlobalStyle } from "styled-components"
 
+export const CSSVariables = createGlobalStyle`
+:root{
+	--primary-color:rgba(25, 147, 150, 1);
+	--primary-color-text: rgba(220,137,59,.8);
+	--primary-color-hover:rgba(220,137,59,1);
+	--secondary-color:rgba(117, 144, 141, 1);
+	--secondary-color-text:rgba(4,40,41,0.8);
+	--secondary-color-hover:rgba(4,40,41,1);
+	--third-color:rgba(220,137,59,1);
+	--third-color-text:rgba(124,145,143,0.8);
+	--third-color-hover:rgba(124,145,143,1);
+	
+
+
+
+}
+`
+
 export const GlobalStyleReset = createGlobalStyle`
 html{
 	font-size:16px;
@@ -23,8 +41,8 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	box-sizing:border-box;
-	font-family:"Roboto";
-	font-weight:100;
+	font-family:"Rubik";
+	font-weight:400;
 	/* font-size:100%; */
 	/* font-size: 100%; */
 	/* font: inherit; */
@@ -35,8 +53,10 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
- background: rgb(2,0,36);
-background: linear-gradient(rgba(2,0,36,1) 0%, rgba(25,147,150,1) 35%, rgba(117,144,141,1) 100%); */
+ /* background: rgb(2,0,36); */
+/* background: linear-gradient(rgba(2,0,36,1) 0%, rgba(25,147,150,1) 35%, rgba(117,144,141,1) 100%); */ 
+
+
 }
 ol, ul {
 	list-style: none;
@@ -85,6 +105,7 @@ h3{
 
 p{
 	font-size:1.3em;
+	font-weight:300;
 }
 
 a{

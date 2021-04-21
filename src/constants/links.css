@@ -1,0 +1,45 @@
+
+
+.nav-links{
+    display:none;
+}
+
+a {
+color:var(--primary-color-text);
+
+}
+
+ a:hover {
+  color: var(--primary-color-hover);
+}
+
+   
+
+
+.sidebar-links  {
+text-align:right;
+margin: 10px 50px;
+font-size:2em;
+
+}
+.sidebar-links li{
+    margin:20px 0px;
+
+}
+
+
+
+
+@media screen and (min-width: 800px) {
+.nav-links {
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+  width:100%;
+}
+
+
+
+
+
+}

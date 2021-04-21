@@ -1,27 +1,45 @@
 import React from "react"
 import Navbar from "./Navbar"
 import Footer from "./Footer"
-import { GlobalStyleReset } from "../styles/globalStyles"
-import { GlobalStyleFonts } from "../styles/globalStyles"
+import Sidebar from "./Sidebar"
+import {
+  GlobalStyleReset,
+  GlobalStyleFonts,
+  CSSVariables,
+} from "../styles/globalStyles"
+
 import styled from "styled-components"
-import StyledBackgroundSection from "../components/Background"
+
+import LinearBacgkround from "../components/LinearBackground"
 
 const Layout = ({ children }) => {
+  const [isOpen, setIsOpen] = React.useState(false)
+  const toggle = () => {
+    setIsOpen(!isOpen)
+    console.log("isOpen", isOpen)
+  }
   return (
     <div>
-      <GlobalStyleReset />
-      <GlobalStyleFonts />
-      <Navbar />
-      <MainContainer>{children}</MainContainer>
-      <Footer />
+      {/* <StyledBackgroundSection> */}
+      <LinearBacgkround>
+        <GlobalStyleReset />
+        <GlobalStyleFonts />
+        <CSSVariables />
+        <Navbar toggle={toggle} />
+        <Sidebar isOpen={isOpen} toggle={toggle} />
+        <MainContainer>{children}</MainContainer>
+        <Footer />
+      </LinearBacgkround>
       {/* </StyledBackgroundSection> */}
     </div>
   )
 }
 
 const MainContainer = styled.main`
-  box-sizing: border-box;
-  margin: 0 30px;
+  padding: 0 30px;
+  @media screen and (max-width: 800px) {
+    padding: 0 10px;
+  }
 `
 
 export default Layout

@@ -11,10 +11,12 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-remark-images`,
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `http://localhost:1337`,
+        apiURL: `https://strapi-marcusblog.herokuapp.com`,
         queryLimit: 1000, // Default to 100
         contentTypes: [`project`],
         //If using single types place them in this array.
@@ -32,7 +34,7 @@ module.exports = {
         fonts: {
           google: [
             {
-              family: "Roboto",
+              family: "Rubik",
               variants: ["300", "400", "500"],
             },
           ],
@@ -46,6 +48,24 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: { name: `images`, path: `${__dirname}/src/assets/images` },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: { name: `about`, path: `${__dirname}/src/about` },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: { name: `posts`, path: `${__dirname}/src/posts` },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: { name: `tips`, path: `${__dirname}/src/tips` },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [{ resolve: "gatsby-remark-images" }],
+      },
     },
   ],
 }
