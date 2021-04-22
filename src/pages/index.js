@@ -45,6 +45,10 @@ export const query = graphql`
         excerpt
         slug
         date(formatString: "YYYY Do MMMM")
+        tag {
+          id
+          name
+        }
       }
     }
     PostFiles: allFile(
@@ -64,7 +68,7 @@ export const query = graphql`
             excerpt
             image {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(width: 400)
               }
             }
           }
@@ -89,7 +93,7 @@ export const query = graphql`
             excerpt
             image {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(width: 400)
               }
             }
           }

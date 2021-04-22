@@ -28,6 +28,10 @@ export const query = graphql`
         date(formatString: "YYYY MMMM")
         excerpt
         slug
+        tag {
+          id
+          name
+        }
       }
     }
   }

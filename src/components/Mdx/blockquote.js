@@ -48,14 +48,13 @@ const Wrapper = styled.blockquote`
     color: hsl(209, 61%, 16%);
     border-left: 3px solid hsl(206, 33%, 96%);
     position: relative;
-    margin: 2rem 0;
-  }
-  @media (min-width: 1170px) {
-    .container {
-      margin-left: -2rem;
-      margin-right: -2rem;
+    /* margin: 2rem 0; */
+    margin: 60px;
+    @media (max-width: 880px) {
+      margin: 30px;
     }
   }
+
   .icon {
     position: absolute;
     top: 0;

@@ -33,9 +33,10 @@ const Wrapper = styled.section`
 const Title = styled.h1`
   display: inline;
   margin: 0 15px;
-  padding: 0 2px 0 0;
+  padding: 0 18px 0 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
   /* margin: 0 auto; */
+  font-family: "Ayus";
   text-align: center;
   font-weight: 500;
   font-size: 2.5em;
