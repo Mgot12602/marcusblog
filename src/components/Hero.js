@@ -38,7 +38,7 @@ const Wrapper = styled.div`
     margin-left: 50px;
     margin-top: 30px;
     width: 50%;
-    font-family: "Disgracefull Demo", "Ayus";
+    font-family: "Disgracefull Demo";
     font-size: 50px;
     font-weight: lighter;
     color: var(--primary-color-text);
