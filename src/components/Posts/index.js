@@ -32,7 +32,7 @@ const Title = styled.h1`
   display: inline;
   margin: 0 15px;
   padding: 0 18px 0 10px;
-  font-family: "Ayus";
+  font-family: "Ayus", "Rubik";
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
   /* margin: 0 auto; */
   text-align: center;

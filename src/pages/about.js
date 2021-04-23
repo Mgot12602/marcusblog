@@ -69,7 +69,7 @@ const about = ({ data }) => {
         </article>
         <div className="contact">
           <h3>Contact me</h3>
-          <div style={{ width: "400px" }}>
+          <div style={{ "max-width": "400px", width: "100%" }}>
             <ContactForm />
           </div>
         </div>
@@ -91,7 +91,7 @@ const Wrapper = styled.section`
     margin-bottom: 20px;
     font-size: 2.3em;
     font-weight: bold;
-    font-family: "Ayus";
+    font-family: "Ayus", "Rubik";
   }
   .about-container {
     margin: 30px;
@@ -104,11 +104,11 @@ const Wrapper = styled.section`
 
   h1 {
     text-align: center;
-    font-family: "PROGRESS PERSONAL USE";
+    font-family: "PROGRESS PERSONAL USE", "Rubik";
   }
 
   h2 {
-    font-family: "Ayus";
+    font-family: "Ayus", "Rubik";
   }
   p {
     line-height: 1.5em;

@@ -27,12 +27,12 @@ function ContactForm() {
 }
 
 const StyledForm = styled.form`
-  width: 400px;
+  width: 100%;
   font-size: 1.5em;
 
   input {
-    /* display: inline-block; */
-    width: 300px;
+    display: block;
+    max-width: 300px;
     line-height: 1.8em;
     border-radius: 5px;
     margin-bottom: 10px;

@@ -123,7 +123,7 @@ const Wrapper = styled.section`
   .sub-title {
     font-weight: bold;
     margin-bottom: 20px;
-    font-family: "Disgracefull Demo", "Ayus";
+    font-family: "Disgracefull Demo", "Ayus", "Rubik";
     font-size: 2em;
     letter-spacing: 3px;
   }
