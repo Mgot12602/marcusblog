@@ -78,17 +78,30 @@ export const GlobalStyleFonts = createGlobalStyle`
 
     @font-face {
   font-family:"PROGRESS PERSONAL USE";
-  src: url('Progress.woff2')format('woff2'),
-  url('Progress.woff')format('woff'),
-  url('Progress.ttf') format('ttf');
+  src: url('/fonts/Progress.woff2')format('woff2'),
+  url('/fonts/Progress.woff')format('woff'),
+  url('/fonts/Progress.ttf') format('ttf');
+ 
 } 
 
 
  @font-face {
   font-family:"Disgracefull Demo";
-  src: url("/Disgracefull-Demo.ttf") format('ttf');
+  src: url("/fonts/Disgracefull-Demo.woff2") format('woff2'),
+   url('/fonts/Disgracefull-Demo.woff')format('woff'),
+  url('/fonts/Disgracefull-Demo.ttf') format('ttf');
   
 } 
+
+@font-face {
+  font-family:"Ayus";
+  src: url("/fonts/Ayus.woff2") format('woff2'),
+   url('/fonts/Ayus.woff')format('woff'),
+  url('/fonts/Ayus.ttf') format('ttf');
+  
+} 
+
+
 h1{
     
 font-size:3.5em;

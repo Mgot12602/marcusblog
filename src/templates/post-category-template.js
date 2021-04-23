@@ -4,6 +4,7 @@ import Layout from "../components/Layout"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Posts from "../components/Posts"
+import Seo from "../components/Seo"
 
 const postCategoryTemplate = ({ data, pageContext }) => {
   console.log("cata in category", pageContext)
@@ -11,11 +12,14 @@ const postCategoryTemplate = ({ data, pageContext }) => {
     PostFiles: { nodes: posts },
   } = data
   const { category } = pageContext
-  console.log("posts", posts)
+
   return (
-    <Layout>
-      <Posts posts={posts} title={`All posts related to ${category}`} />
-    </Layout>
+    <>
+      <Seo title={`${category} Posts`} />
+      <Layout>
+        <Posts posts={posts} title={`All posts related to ${category}`} />
+      </Layout>
+    </>
   )
 }
 
