@@ -78,13 +78,16 @@ export const GlobalStyleFonts = createGlobalStyle`
 
     @font-face {
   font-family:"PROGRESS PERSONAL USE";
-  src: url("../assets/fonts/Progress.ttf") format('ttf');
+  src: url("../assets/fonts/Progress.woff2")format('woff2'),
+  url("../assets/fonts/Progress.woff")format('woff'),
+  url("../assets/fonts/Progress.ttf") format('ttf');
 } 
 
 
  @font-face {
   font-family:"Disgracefull Demo";
   src: url("../assets/fonts/Disgracefull-Demo.ttf") format('ttf');
+  
 } 
 h1{
     
