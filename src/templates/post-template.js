@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import Seo from "../components/Seo"
 import styled from "styled-components"
 
 const posttemplate = ({ data }) => {
@@ -18,6 +19,7 @@ const posttemplate = ({ data }) => {
             slug,
             date,
             readTime,
+            excerpt,
             image: {
               childImageSharp: { gatsbyImageData: image },
             },
@@ -28,39 +30,42 @@ const posttemplate = ({ data }) => {
   } = data
 
   return (
-    <Layout>
-      <Wrapper>
-        <article>
-          <div className="header">
-            <h1>{title}</h1>
-            <div className="date-read-auth">
-              <div className="date-readTime">
-                <h3>{date}</h3>
-                <p>{readTime} min read</p>
+    <>
+      <Seo title={title} description={excerpt} img={image} article={body} />
+      <Layout>
+        <Wrapper>
+          <article>
+            <div className="header">
+              <h1>{title}</h1>
+              <div className="date-read-auth">
+                <div className="date-readTime">
+                  <h3>{date}</h3>
+                  <p>{readTime} min read</p>
+                </div>
+                <p>
+                  <span className="author">Author:</span> {author}
+                </p>
               </div>
-              <p>
-                <span className="author">Author:</span> {author}
-              </p>
             </div>
+            <div className="image-container">
+              <GatsbyImage
+                image={image}
+                alt={title}
+                style={{ margin: "20px auto" }}
+              />
+            </div>
+            <div className="mdx-render">
+              <MDXRenderer>{body}</MDXRenderer>
+            </div>
+          </article>
+          <div className="back-btn-container">
+            <button className="back-btn">
+              <Link to="/blog">Back to All Posts</Link>
+            </button>
           </div>
-          <div className="image-container">
-            <GatsbyImage
-              image={image}
-              alt={title}
-              style={{ margin: "20px auto" }}
-            />
-          </div>
-          <div className="mdx-render">
-            <MDXRenderer>{body}</MDXRenderer>
-          </div>
-        </article>
-        <div className="back-btn-container">
-          <button className="back-btn">
-            <Link to="/blog">Back to All Posts</Link>
-          </button>
-        </div>
-      </Wrapper>
-    </Layout>
+        </Wrapper>
+      </Layout>
+    </>
   )
 }
 
@@ -155,6 +160,7 @@ export const query = graphql`
           author
           category
           slug
+          excerpt
           readTime
           date(formatString: "MMMM Do, YYYY")
           image {

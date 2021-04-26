@@ -2,16 +2,20 @@ import React from "react"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import Projects from "../components/Projects"
+import Seo from "../components/Seo"
 
 const projectsindex = ({ data }) => {
   const {
     projects: { nodes: projects },
   } = data
-  console.log("projects", projects)
+
   return (
-    <Layout>
-      <Projects projects={projects} title="All projects" />
-    </Layout>
+    <>
+      <Seo title="Projects" />
+      <Layout>
+        <Projects projects={projects} title="All projects" />
+      </Layout>
+    </>
   )
 }
 

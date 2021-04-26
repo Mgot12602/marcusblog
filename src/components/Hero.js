@@ -2,7 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import StyledBackgroundSection from "../components/Background"
 
-const Hero = () => {
+const Hero = props => {
+  console.log("hero props", props)
   return (
     <Wrapper>
       <StyledBackgroundSection>
@@ -39,7 +40,7 @@ const Wrapper = styled.div`
     margin-top: 30px;
     width: 50%;
     font-family: "Disgracefull Demo";
-    font-size: 50px;
+    font-size: 40px;
     font-weight: lighter;
     color: var(--primary-color-text);
     @media screen and (max-width: 800px) {

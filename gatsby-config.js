@@ -6,7 +6,17 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: `Marcus Web Dev`,
+    description: `Enthusiast of the world of React sharing my projects, articles and tips`,
+    titleTemplate: `%s | Marcus Web Dev`,
+    url: `https://marcus-blog.netlify.app`,
+    twitterUsername: `@TechNew58575550`,
+    img: `/marcusblog.png`,
+  },
+
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,

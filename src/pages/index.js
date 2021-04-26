@@ -4,6 +4,7 @@ import Hero from "../components/Hero"
 import Projects from "../components/Projects"
 import Posts from "../components/Posts"
 import Tips from "../components/Tips"
+import Seo from "../components/Seo"
 import { graphql } from "gatsby"
 import StyledBackgroundSection from "../components/Background"
 
@@ -14,20 +15,22 @@ export default function Home({ data }) {
     TipFiles: { nodes: tips },
   } = data
 
-  console.log("data", data)
   return (
-    <Layout>
-      <Hero />
-      <StyledBackgroundSection>
-        <Projects title="Latest Project" projects={projects} />
-      </StyledBackgroundSection>
-      <StyledBackgroundSection>
-        <Posts title="Latest Posts" posts={posts} />
-      </StyledBackgroundSection>
-      <StyledBackgroundSection>
-        <Tips title="Latest Tips" tips={tips} />
-      </StyledBackgroundSection>
-    </Layout>
+    <>
+      <Seo title="Home" />
+      <Layout>
+        <Hero />
+        <StyledBackgroundSection>
+          <Projects title="Latest Project" projects={projects} />
+        </StyledBackgroundSection>
+        <StyledBackgroundSection>
+          <Posts title="Latest Posts" posts={posts} />
+        </StyledBackgroundSection>
+        <StyledBackgroundSection>
+          <Tips title="Latest Tips" tips={tips} />
+        </StyledBackgroundSection>
+      </Layout>
+    </>
   )
 }
 

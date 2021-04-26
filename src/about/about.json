@@ -1,11 +1,11 @@
 {
 "title":"About me",
-"subtitle":"Hi I am Marc Gotzens a react frontend developer",
+"subtitle":"Hi, I am Marc Gotzens, React Frontend Developer",
 
 "info":{
     "languages":["css","html","javascript"],
-    "description":"My goal is building well structured high performant websites using the latest technologies available",
-    "description2":"I am focused in the React stack",
+    "description":"One of my goals is to build well structured and high performant apps using the technology that fits better in each case.",
+    "description2":"Always ready for learning new things and better ways to do the same thing.",
     "contact":"marcgotzens@hotmail.com"
     
 

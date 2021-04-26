@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import Posts from "../components/Posts"
+import Seo from "../components/Seo"
 
 const blog = ({ data }) => {
   const {
@@ -9,9 +10,12 @@ const blog = ({ data }) => {
   } = data
   console.log("posts", posts)
   return (
-    <Layout>
-      <Posts posts={posts} title="All posts" />
-    </Layout>
+    <>
+      <Seo title="Blog" />
+      <Layout>
+        <Posts posts={posts} title="All posts" />
+      </Layout>
+    </>
   )
 }
 

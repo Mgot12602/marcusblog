@@ -2,16 +2,20 @@ import React from "react"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import Tips from "../components/Tips"
+import Seo from "../components/Seo"
 
 const blog = ({ data }) => {
   const {
     TipFiles: { nodes: tips },
   } = data
-  console.log("tips inside tips page", tips)
+
   return (
-    <Layout>
-      <Tips tips={tips} title="All tips" />
-    </Layout>
+    <>
+      <Seo title="Tips" />
+      <Layout>
+        <Tips tips={tips} title="All tips" />
+      </Layout>
+    </>
   )
 }
 
