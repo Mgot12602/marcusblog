@@ -1,0 +1,41 @@
+---
+title: Why my inline styles are not working?
+slug: inline-styles-not-working
+excerpt: A syntax error I found while inline styling a component.
+image: ./images/tip.png
+date: 2021-04-13
+author: Marc Gotzens
+category: css
+readTime: 1
+---
+
+# Why my inine styles are not working?
+
+I found this problem a few days ago. When I was trying to style an image component.
+
+```js
+<ImageComponent style={{ width: "300px" }} />
+```
+
+So far everything was ok... but when I wanted to add something else like:
+
+```js
+<ImageComponent style={{ border-radius: "50px" }} />
+```
+
+<blockquote display="warning">
+  It didn't work at all. And it's sometimes hard when styles are not taken by
+  the component without explicit tips which can help you to debug.
+</blockquote>
+
+So the trick I found out is just about syntax:
+
+<blockquote display="info">
+  Whenever the css property is longer than 1 word and it is separated by a -
+  such as: border-radius or margin-left, then you need to wrap the property
+  between brackets the same way you do with the value:
+</blockquote>
+
+```js
+<ImageComponent style={{ "border-radius": "50px" }} />
+```
