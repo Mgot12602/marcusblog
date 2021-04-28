@@ -48,6 +48,20 @@ const Seo = ({ title, description, image, article }) => {
       )}
       {seo.image && <meta property="og:image" content={seo.image} />}
       <meta name="twitter:card" content="summary_large_image" />
+      <link
+        rel="preload"
+        href="/fonts/Progress.woff2"
+        as="font"
+        type="font/woff2"
+        crossorigin
+      ></link>
+      <link
+        rel="preload"
+        href="/fonts/Disgracefull-Demo.woff2"
+        as="font"
+        type="font/woff2"
+        crossorigin
+      ></link>
     </Helmet>
   )
 }

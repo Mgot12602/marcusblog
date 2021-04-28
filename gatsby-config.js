@@ -23,6 +23,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-remark-images`,
     `gatsby-transformer-json`,
+
     {
       resolve: `gatsby-source-strapi`,
       options: {
