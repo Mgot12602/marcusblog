@@ -57,9 +57,23 @@ const Seo = ({ title, description, image, article }) => {
       ></link>
       <link
         rel="preload"
+        href="/fonts/Progress.woff"
+        as="font"
+        type="font/woff"
+        crossorigin
+      ></link>
+      <link
+        rel="preload"
         href="/fonts/Disgracefull-Demo.woff2"
         as="font"
         type="font/woff2"
+        crossorigin
+      ></link>
+      <link
+        rel="preload"
+        href="/fonts/Disgracefull-Demo.woff"
+        as="font"
+        type="font/woff"
         crossorigin
       ></link>
     </Helmet>
