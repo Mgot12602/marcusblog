@@ -17,7 +17,10 @@ const PrismWrapper = props => {
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre className={className} style={style}>
           {tokens.map((line, i) => (
-            <div {...getLineProps({ line, key: i })}>
+            <div
+              {...getLineProps({ line, key: i })}
+              style={{ overflow: "auto" }}
+            >
               {line.map((token, key) => (
                 <span {...getTokenProps({ token, key })} />
               ))}
