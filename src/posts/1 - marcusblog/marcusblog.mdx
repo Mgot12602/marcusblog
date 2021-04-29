@@ -1,25 +1,52 @@
 ---
-title: Marcus Blog with Gatsby, MDX and Strapi
-slug: marcus-blog-gatsby-mdx-strapi
-excerpt: I'm baby retro master cleanse leggings palo santo before they sold out. Art party before they sold out tumeric marfa, listicle kombucha iPhone palo santo fixie taiyaki. VHS retro gochujang photo booth, fashion axe air plant sriracha. Four dollar toast retro tousled, cornhole helvetica prism locavore echo park whatever lumbersexual chia 3 wolf moon swag tofu. IPhone taiyaki hell...
-image: ./images/gatsby-mdx.png
+title: What I learned making this Blog
+slug: lessons-learned-building-this-blog
+excerpt: Some things I learned while making this blog that won't forget.
+image: ./images/lessonslearned.jpg
 date: 2021-04-13
 author: Marc Gotzens
 category: gatsby
-readTime: 5
+readTime: 3
 ---
 
-# Building a blog with gatsby, strapi and mdx
+## What I learned in my blog project:
 
-I'm baby retro master cleanse leggings palo santo before they sold out. Art party before they sold out tumeric marfa, listicle kombucha iPhone palo santo fixie taiyaki. VHS retro gochujang photo booth, fashion axe air plant sriracha. Four dollar toast retro tousled, cornhole helvetica prism locavore echo park whatever lumbersexual chia 3 wolf moon swag tofu. IPhone taiyaki hell of, kitsch 3 wolf moon cornhole cold-pressed yr lo-fi disrupt cray raclette marfa +1.
+I learned many things while building this Blog with Gatsby but the most important was that **I should have reused the components much more.**
+Designing similar components to provide different and unique looks to do not seem repetitive and enhance your design variety it is not worth at all.
+I knew I could use one component for all the list but then I started thinking that If my blog list, my tip list and my projects list look all the same, it wouldn’t look a customized website but more like a simplish boring template.
 
-### This is a fantastic butterfly
+What happened is that anyway all list components ended up looking the same because I wanted to spend more time in content, having neat looking site, and optimizing performance rather than having to rethink the list structure for each tip, blog and project site. Which actually it looks more coherent and organized than making a different list styles for each one.
 
-![buterfly](./images/butterfly.jpg)
+So I wish I have designed one single component for everything rather than making almost the same `<PostsList/> <TipsList/> <ProjectsList/>` component for each case, where I wasted hours copy pasting, styling and testing.
+So next time I rather design something like `<ConentList/>` and add props for example like `<Contentlist styles={postStyles}/>` or even better, if using Styled Components It could be as easy as: `<ContentList postStyles/>` and pass the prop postStyles to the styled component.
 
-## Code example
+### So the first lesson and most important I learned was:
+
+<blockquote display="info">
+  Priorize making your components reusable and only make new ones if strictly
+  necessary.
+</blockquote>
+
+Second, **Use styled components!**
+![styled components](./images/styled.png)
+
+It made my life easier, I remember having troubles while styling in React because one change in a style could mess up another component. With Styled component your styles are focused and the only think you have to worry about is to not style the same element in two components with different values, that can get you crazy and I found out that the component which is upper in the hierarchy, has priority over a the other.
+I also like the idea of having the styles in the same file as the component because it is easy to make changes without need to navigate to another folder and make imports.
+
+Third, **I won’t use Strapi anymore if I can.** It made me struggle a lot, while deploying it and then I found out that for some reason colletion-types is a plugin which only works in development mode.
+It means, you can’t use your Content-Type Builder tool in production because it is based in a plugin that uses reloading and it doesn't in production mode.
+
+And last, **How to use preloading for fonts and how it affects in performance.**
+It improved my font load speed perception with adding a preload inside my `<Helmet/>` component.
 
 ```js
-const=firstName="john"
-const=firstName="john"
+<link
+  rel="preload"
+  href="/fonts/Progress.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin
+></link>
 ```
+
+I would like to write an article about it soon.

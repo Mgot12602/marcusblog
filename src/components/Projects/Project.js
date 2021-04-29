@@ -5,7 +5,6 @@ import styled from "styled-components"
 import { FaRegCalendarAlt } from "react-icons/fa"
 
 const Project = project => {
-  console.log(project)
   const {
     title,
     date,
@@ -16,7 +15,7 @@ const Project = project => {
       childImageSharp: { gatsbyImageData: image },
     },
   } = project
-  console.log("tags", tags)
+
   return (
     <Wrapper>
       <div className="columns">

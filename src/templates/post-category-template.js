@@ -1,13 +1,11 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/Layout"
-import { GatsbyImage } from "gatsby-plugin-image"
-import { MDXRenderer } from "gatsby-plugin-mdx"
+
 import Posts from "../components/Posts"
 import Seo from "../components/Seo"
 
 const postCategoryTemplate = ({ data, pageContext }) => {
-  console.log("cata in category", pageContext)
   const {
     PostFiles: { nodes: posts },
   } = data

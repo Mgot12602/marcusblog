@@ -3,7 +3,6 @@ import Post from "./Post"
 import styled from "styled-components"
 
 const Posts = ({ title, posts }) => {
-  console.log(posts)
   return (
     <Wrapper>
       <Title>{title}</Title>

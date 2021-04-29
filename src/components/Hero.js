@@ -3,7 +3,6 @@ import styled from "styled-components"
 import StyledBackgroundSection from "../components/Background"
 
 const Hero = props => {
-  console.log("hero props", props)
   return (
     <Wrapper>
       <StyledBackgroundSection>

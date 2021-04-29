@@ -11,10 +11,8 @@ export const query = graphql`
   {
     about: aboutJson {
       info {
-        contact
         description
         description2
-        languages
       }
       subtitle
       title
@@ -28,7 +26,6 @@ export const query = graphql`
 `
 
 const about = ({ data }) => {
-  console.log("about data", data)
   const {
     imageFile: {
       childImageSharp: { image },
@@ -36,7 +33,7 @@ const about = ({ data }) => {
     about: {
       title,
       subtitle,
-      info: { contact, description, description2, languages },
+      info: { description, description2 },
     },
   } = data
   return (

@@ -4,7 +4,6 @@ import styled from "styled-components"
 import StyledBackgroundSection from "../../components/Background"
 
 const Projects = ({ title, projects }) => {
-  console.log(projects)
   return (
     <Wrapper>
       <StyledBackgroundSection>

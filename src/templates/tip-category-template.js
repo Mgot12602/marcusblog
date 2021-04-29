@@ -9,8 +9,7 @@ const blog = ({ data, pageContext }) => {
     TipFiles: { nodes: tips },
   } = data
   const { category } = pageContext
-  console.log("category", category)
-  console.log("tips", tips)
+
   return (
     <>
       <Seo title={`${category} Tips`} />

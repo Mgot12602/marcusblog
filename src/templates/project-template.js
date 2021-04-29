@@ -7,8 +7,6 @@ import { FaCode } from "react-icons/fa"
 import { VscVmRunning } from "react-icons/vsc"
 
 const projecttemplate = ({ data }) => {
-  console.log("data", data)
-
   const {
     project: {
       nodes: [
@@ -44,13 +42,13 @@ const projecttemplate = ({ data }) => {
           </div>
           <div className="box-container">
             <div className="source-box box">
-              <a href={sourcelink} target="_blank">
+              <a href={sourcelink} target="_blank" rel="noreferrer">
                 Source Code <FaCode />
               </a>
             </div>
 
             <div className="live-box box">
-              <a href={livelink} target="_blank">
+              <a href={livelink} target="_blank" rel="noreferrer">
                 View it live <VscVmRunning />
               </a>
             </div>

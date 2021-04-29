@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import { useLocation } from "@reach/router"
+import PropTypes from "prop-types"
 
 const query = graphql`
   query MyQuery {
@@ -78,6 +79,10 @@ const Seo = ({ title, description, image, article }) => {
       ></link>
     </Helmet>
   )
+}
+
+Seo.propTypes = {
+  title: PropTypes.string,
 }
 
 export default Seo

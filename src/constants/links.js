@@ -1,9 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
-import styled from "styled-components"
+
 import "./links.css"
 const Links = ({ styleClass }) => {
-  console.log("props.display", styleClass)
   return (
     <ul className={styleClass}>
       <li>

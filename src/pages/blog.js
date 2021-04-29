@@ -8,7 +8,7 @@ const blog = ({ data }) => {
   const {
     PostFiles: { nodes: posts },
   } = data
-  console.log("posts", posts)
+
   return (
     <>
       <Seo title="Blog" />

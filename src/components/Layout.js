@@ -16,7 +16,6 @@ const Layout = ({ children }) => {
   const [isOpen, setIsOpen] = React.useState(false)
   const toggle = () => {
     setIsOpen(!isOpen)
-    console.log("isOpen", isOpen)
   }
   return (
     <div>

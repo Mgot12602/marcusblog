@@ -5,7 +5,6 @@ import styled from "styled-components"
 import { FaRegCalendarAlt } from "react-icons/fa"
 
 const Post = post => {
-  console.log("post in post component", post)
   const {
     childMdx: {
       frontmatter: {
