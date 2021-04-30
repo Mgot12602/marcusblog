@@ -78,18 +78,22 @@ export const GlobalStyleFonts = createGlobalStyle`
 
     @font-face {
   font-family:"PROGRESS PERSONAL USE";
+    font-display:block;
   src: url('/fonts/Progress.woff2')format('woff2'),
   url('/fonts/Progress.woff')format('woff'),
   url('/fonts/Progress.ttf') format('ttf');
+
  
 } 
 
 
  @font-face {
   font-family:"Disgracefull Demo";
+   font-display:block;
   src: url("/fonts/Disgracefull-Demo.woff2") format('woff2'),
    url('/fonts/Disgracefull-Demo.woff')format('woff'),
   url('/fonts/Disgracefull-Demo.ttf') format('ttf');
+   
   
 } 
 
