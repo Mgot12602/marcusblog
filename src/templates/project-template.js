@@ -12,7 +12,7 @@ const projecttemplate = ({ data }) => {
       nodes: [
         {
           title,
-          desc,
+          richDesc,
           date,
           tags,
           livelink,
@@ -54,7 +54,7 @@ const projecttemplate = ({ data }) => {
             </div>
           </div>
           <h3 className="sub-title">About this project</h3>
-          <p className="description">{desc}</p>
+          <div className="description">{richDesc}</div>
           <p className="categories">
             {tags.map(tag => (
               <span className="tags">{`${tag.name} `}</span>
@@ -129,6 +129,8 @@ const Wrapper = styled.section`
     line-height: 35px;
     margin-bottom: 20px;
     font-weight: 350;
+    white-space: pre-wrap;
+    font-size: 1.5em;
     @media screen and (max-width: 800px) {
       line-height: 20px;
     }
@@ -175,7 +177,7 @@ export const query = graphql`
       nodes {
         slug
         title
-        desc
+        richDesc
         tags: tag {
           name
         }
