@@ -123,7 +123,7 @@ h3{
 	font-size:1.5em;
 }
 
-p{
+p,li{
 	font-size:1.3em;
 	font-weight:300;
 }

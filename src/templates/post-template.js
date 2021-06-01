@@ -133,20 +133,21 @@ const Wrapper = styled.section`
     }
   }
 
-  .mdx-render p {
+  .mdx-render p,
+  li {
     line-height: 35px;
-    margin-bottom: 30px;
-    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
   }
   .mdx-render h2 {
-    margin-top: 10px;
-    margin-bottom: 25px;
+    margin-top: 40px;
+    margin-bottom: 15px;
   }
 
   .mdx-render pre {
-    margin: 30px;
+    margin: 20px 20px 40px;
     padding: 5px;
-    font-size: 1.4em;
+    font-size: 1.2em;
     line-height: 1.3em;
   }
 `

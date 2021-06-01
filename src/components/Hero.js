@@ -5,9 +5,9 @@ import StyledBackgroundSection from "../components/Background"
 const Hero = props => {
   return (
     <Wrapper>
-      <StyledBackgroundSection>
-        <h1>MARCUS WEB DEV</h1>
-      </StyledBackgroundSection>
+      {/* <StyledBackgroundSection> */}
+      <h1>MARCUS WEB DEV</h1>
+      {/* </StyledBackgroundSection> */}
       <h2>
         Enthusiast of the world of React sharing my projects, articles and tips
       </h2>

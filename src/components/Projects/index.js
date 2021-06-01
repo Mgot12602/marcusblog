@@ -6,14 +6,12 @@ import StyledBackgroundSection from "../../components/Background"
 const Projects = ({ title, projects }) => {
   return (
     <Wrapper>
-      <StyledBackgroundSection>
-        <Title>{title}</Title>
-        <div>
-          {projects.map(project => {
-            return <Project key={project.id} {...project} />
-          })}
-        </div>
-      </StyledBackgroundSection>
+      <Title>{title}</Title>
+      <div>
+        {projects.map(project => {
+          return <Project key={project.id} {...project} />
+        })}
+      </div>
     </Wrapper>
   )
 }
